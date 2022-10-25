@@ -8,6 +8,8 @@ import os # for knowing extension of the file
 from PIL import Image # for resizing images automatically
 import pickle
 import numpy as np
+import warnings
+warnings.filterwarnings("ignore")
 
 model = pickle.load(open('model.pkl', 'rb'))
 
@@ -150,9 +152,8 @@ def prediction():
         #post = Post(mom=form.mom.data, dad=form.dad.data, author=current_user)
         #db.session.add(post)
         #db.session.commit()
-        #flash('your post has been created', 'success') #here success is bootstrap class // documentation nk
         ans = form.mom.data
-        ans =float(int(ans)/100)
+        ans = float(int(ans)/100)
         temo = form.dad.data
         temo = float(int(temo) / 100)
         #flash('prob is  {}'.format(temo))
