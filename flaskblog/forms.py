@@ -56,3 +56,9 @@ class PostForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
     submit = SubmitField('Post')
+
+
+class PredictForm(FlaskForm):
+    mom = StringField('Mom', validators=[DataRequired()])
+    dad = StringField('Dad', validators=[DataRequired()])
+    submit = SubmitField('Post')

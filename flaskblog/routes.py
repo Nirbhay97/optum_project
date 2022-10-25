@@ -1,11 +1,15 @@
 from flask import Flask, render_template, url_for, flash, redirect, request, abort
 from flaskblog import app, db, bcrypt
-from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
+from flaskblog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm, PredictForm
 from flaskblog.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 import secrets # for generating random picture file names so that they do not collide
 import os # for knowing extension of the file
 from PIL import Image # for resizing images automatically
+import pickle
+import numpy as np
+
+model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route("/")
 @app.route("/home")
@@ -136,3 +140,25 @@ def delete_post(post_id):
     db.session.commit()
     flash('your post has been deleted', 'success')
     return redirect(url_for('home'))
+
+
+@app.route("/prediction", methods=['GET', 'POST'])
+@login_required
+def prediction():
+    form = PredictForm()
+    if form.validate_on_submit():
+        #post = Post(mom=form.mom.data, dad=form.dad.data, author=current_user)
+        #db.session.add(post)
+        #db.session.commit()
+        #flash('your post has been created', 'success') #here success is bootstrap class // documentation nk
+        ans = form.mom.data
+        ans =float(int(ans)/100)
+        temo = form.dad.data
+        temo = float(int(temo) / 100)
+        #flash('prob is  {}'.format(temo))
+        #flash('prob is  {}'.format(ans))
+        arr = np.array([ans, temo])
+        predict = model.predict([arr])[0]
+        flash('prob is  {}'.format(predict))
+       # return redirect(url_for('prediction'))
+    return render_template('prediction.html', title='New Post', form=form, legend='Predict')
