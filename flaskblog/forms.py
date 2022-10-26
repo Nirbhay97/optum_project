@@ -57,6 +57,7 @@ class PostForm(FlaskForm):
 
 
 class PredictForm(FlaskForm):
+    disease = StringField('Disease', validators=[DataRequired()])
     mom = StringField('Mom', validators=[DataRequired()])
     dad = StringField('Dad', validators=[DataRequired()])
     submit = SubmitField('Post')
