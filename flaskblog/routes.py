@@ -13,6 +13,36 @@ warnings.filterwarnings("ignore")
 
 model = pickle.load(open('model.pkl', 'rb'))
 
+tests = {
+    "cancer": ["Blood tests - CBC", "tumor marker Imaging tests  -CT Scan", "MRI"],
+    "alzheimer's disease": ["brain imaging tests -MRI", "CT", "PET"],
+    "arthritis": ["Blood tests - ESR", "CRP"],
+    "dementia": ["Cognitive and neurological tests", "Brain scan"],
+    "diabetes": ["A1C Test"],
+    "heart disease": ["ECG", "cardiac CT scan", "cardiac MRI"],
+    "high blood pressure": ["Ambulatory monitoring blood", "urine tests", "ECG"],
+    "multiple sclerosis": ["MRI Scan"],
+    "parkinson's disease": ["SPECT Scan", "DAT scan"],
+    "spina bifida": ["MSAFP Test"],
+    "thyroid disorders": ["TSH", "T3-T4", "TSI", "antithyroid antibody test"]
+}
+
+symptoms = {
+    "cancer": ["weight loss", "fatigue", "fever", "skin changes"],
+    "alzheimer's disease": ["forgetting recent events", "misplacing items", "asking questions repetetively"],
+    "arthritis": ["fatigue", "fever", "loss of apetite", "swollen joints", "joint stiffness"],
+    "dementia": ["memory loss", "difficulty in concentrating", "confusion", "mood changes"],
+    "diabetes": ["very thirsty", "very hungry", "weight loss", "urinate alot"],
+    "heart disease": ["chest pain", "shortness of breath", "pain in the neck", "jaw and back"],
+    "high blood pressure": ["dizziness", "nervousness", "sweating", "trouble sleeping"],
+    "multiple sclerosis": ["loss of vision", "loss of power in arm", "numbness in leg"],
+    "parkinson's disease": ["tremor", "slowed movement", "rigid muscles", "impaired posture"],
+    "spina bifida": ["weakness or total paralysis of legs", "bowel incontinence", "loss of skin sensation in legs"],
+    "thyroid disorders": ["fatigue", "constipation", "dry skin", "weight gain"]
+}
+
+
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -53,11 +83,7 @@ def login():
     return render_template('login.html', title='Login', form=form)
 
 
-#if form.email.data == 'abc@gmail.com' and form.password.data == 'abc':
-# flash('you have been logged in!', 'success')
-# return redirect(url_for('home'))
-#else:
-#  flash('login unsuccessfully, please check user name and password', 'danger')
+
 
 @app.route("/logout")
 def logout():
@@ -144,22 +170,55 @@ def delete_post(post_id):
     return redirect(url_for('home'))
 
 
+category_d = ["Fine", "Mild", "Moderate", "Severe", "Intense"]
+
+
 @app.route("/prediction", methods=['GET', 'POST'])
 @login_required
 def prediction():
     form = PredictForm()
     if form.validate_on_submit():
-        #post = Post(mom=form.mom.data, dad=form.dad.data, author=current_user)
-        #db.session.add(post)
-        #db.session.commit()
-        ans = form.mom.data
-        ans = float(int(ans)/100)
-        temo = form.dad.data
-        temo = float(int(temo) / 100)
-        #flash('prob is  {}'.format(temo))
-        #flash('prob is  {}'.format(ans))
-        arr = np.array([ans, temo])
-        predict = model.predict([arr])[0]
-        flash('prob is  {}'.format(predict))
-       # return redirect(url_for('prediction'))
+        dis = form.disease.data
+        mom = form.mom.data
+        mom = float(int(mom)/100)
+        dad = form.dad.data
+        dad = float(int(dad) / 100)
+        arr = np.array([mom, dad])
+        p = round(model.predict([arr])[0], 2)
+        test = []
+        sysm = []
+        #specialist = []
+        disease_catr = ""
+        #nikitha_test(predict, disease, test, sysm, disease_catr)
+        if p < .17:
+            test.append(tests[dis][0])
+            sysm.append(symptoms[dis[0]])
+            disease_catr = category_d[0]
+        elif p < .34 and p > .18:
+            test.append(tests[dis][0])
+            sysm.append(symptoms[dis[0]])
+            sysm.append(symptoms[dis[1]])
+            disease_catr = category_d[1]
+        elif p < .5 and p > .34:
+            test.append(tests[dis][0])
+            # test = test.append(tests[dis][-1])
+            sysm = symptoms[dis]
+            disease_catr = category_d[2]
+        elif p < .67 and p > .51:
+            test.append(tests[dis][0])
+            # test = test.append(tests[dis][-1])
+            sysm = symptoms[dis]
+            disease_catr = category_d[3]
+        else:
+            test = tests[dis]
+            sysm = symptoms[dis]
+            disease_catr = category_d[4]
+
+        print(test)
+        print(sysm)
+        print("hey")
+        #flash('prob is  {}'.format(p))
+        return render_template('predict_out.html', disease_catr=disease_catr, disease=dis, test=test, sysm=sysm)
+
+
     return render_template('prediction.html', title='New Post', form=form, legend='Predict')

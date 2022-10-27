@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+{% block content %}
+<script src="{{ url_for('static', filename='temp.js')}}"></script>
+
+
+<div class="btn-group-vertical d-grid gap-3 " style="margin-left: -200px;">
+
+  <h2 class="card-title font-weight-bold  text-white-50" style="margin-bottom: 40px margin-left: -10px;">
+    Analysis Section
+  </h2>
+
+<button type="button" class="btn addtrans btn-primary border border-2 rounded-pill" style="margin-bottom: 40px;" data-toggle="modal" data-target="#possibledisease">
+   Possible Diseases
+</button>
+
+
+<button type="button" class="btn addtrans btn-primary border border-2 rounded-pill" style="margin-bottom: 40px;" data-toggle="modal" data-target="#chancesofinheritance">
+  Chances of Inheritance
+</button>
+
+
+<button type="button" class="btn addtrans btn-primary border border-2 rounded-pill" style="margin-bottom: 40px;" data-toggle="modal" data-target="#recommendedtests">
+  Recommended Tests
+</button>
+
+
+<button type="button" class="btn addtrans btn-primary border border-3 rounded-pill"  style="margin-bottom: 20px;" data-toggle="modal" data-target="#possiblesymptoms">
+   Possible Symptoms
+</button>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="possibledisease" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Possible Diseases</h5>
+
+      </div>
+      <div class="modal-body">
+
+
+         <ul>
+
+          <li> {{ disease }} </li>
+
+      </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="chancesofinheritance" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Chances of Inheritance</h5>
+
+      </div>
+      <div class="modal-body">
+          <ul>
+
+          <li> {{ disease_catr }} </li>
+
+      </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="possiblesymptoms" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Possible Symptoms</h5>
+
+      </div>
+      <div class="modal-body">
+      <ul>
+        {% for i in sysm %}
+          <li> {{ i }} </li>
+        {% endfor %}
+      </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="recommendedtests" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Recommended Tests</h5>
+
+      </div>
+      <div class="modal-body">
+      <ul>
+        {% for i in test %}
+          <li> {{ i }} </li>
+        {% endfor %}
+      </ul>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
