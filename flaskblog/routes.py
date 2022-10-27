@@ -42,6 +42,7 @@ symptoms = {
 }
 
 
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -170,31 +171,6 @@ def delete_post(post_id):
 
 
 category_d = ["Fine", "Mild", "Moderate", "Severe", "Intense"]
-def nikitha_test(p, dis, test, sysm, disease_catr):
-    if p < .17:
-         test = test.append(tests[dis][0])
-         sysm = sysm.append(symptoms[dis[0]])
-         disease_catr = disease_catr.append(category_d[0])
-    elif p < .34 and p > .18:
-        test = test.append(tests[dis][0])
-        sysm = sysm.append(symptoms[dis[0]])
-        sysm = sysm.append(symptoms[dis[1]])
-        disease_catr = disease_catr.append(category_d[1])
-    elif p < .5 and p > .19:
-        test = test.append(tests[dis][0])
-        #test = test.append(tests[dis][-1])
-        sysm = symptoms[dis]
-        disease_catr = disease_catr.append(category_d[2])
-    elif p < .67 and p > .51:
-        test = test.append(tests[dis][0])
-        #test = test.append(tests[dis][-1])
-        sysm = symptoms[dis]
-        disease_catr = disease_catr.append(category_d[3])
-    else:
-        test = tests[dis]
-        sysm = symptoms[dis]
-        disease_catr = disease_catr.append(category_d[4])
-
 
 
 @app.route("/prediction", methods=['GET', 'POST'])
@@ -202,18 +178,47 @@ def nikitha_test(p, dis, test, sysm, disease_catr):
 def prediction():
     form = PredictForm()
     if form.validate_on_submit():
-        disease = form.disease.data
+        dis = form.disease.data
         mom = form.mom.data
         mom = float(int(mom)/100)
         dad = form.dad.data
         dad = float(int(dad) / 100)
         arr = np.array([mom, dad])
-        predict = round(model.predict([arr])[0], 2)
+        p = round(model.predict([arr])[0], 2)
         test = []
         sysm = []
         #specialist = []
-        disease_catr = []
-        nikitha_test(predict, disease, test, sysm, disease_catr)
-        return render_template('predict_out.html', disease_catr=disease_catr, disease=disease, test=test, sysm=sysm)
-        #flash('prob is  {}'.format(predict))
+        disease_catr = ""
+        #nikitha_test(predict, disease, test, sysm, disease_catr)
+        if p < .17:
+            test.append(tests[dis][0])
+            sysm.append(symptoms[dis[0]])
+            disease_catr = category_d[0]
+        elif p < .34 and p > .18:
+            test.append(tests[dis][0])
+            sysm.append(symptoms[dis[0]])
+            sysm.append(symptoms[dis[1]])
+            disease_catr = category_d[1]
+        elif p < .5 and p > .34:
+            test.append(tests[dis][0])
+            # test = test.append(tests[dis][-1])
+            sysm = symptoms[dis]
+            disease_catr = category_d[2]
+        elif p < .67 and p > .51:
+            test.append(tests[dis][0])
+            # test = test.append(tests[dis][-1])
+            sysm = symptoms[dis]
+            disease_catr = category_d[3]
+        else:
+            test = tests[dis]
+            sysm = symptoms[dis]
+            disease_catr = category_d[4]
+
+        print(test)
+        print(sysm)
+        print("hey")
+        #flash('prob is  {}'.format(p))
+        return render_template('predict_out.html', disease_catr=disease_catr, disease=dis, test=test, sysm=sysm)
+
+
     return render_template('prediction.html', title='New Post', form=form, legend='Predict')
