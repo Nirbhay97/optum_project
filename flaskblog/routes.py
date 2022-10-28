@@ -9,6 +9,9 @@ from PIL import Image # for resizing images automatically
 import pickle
 import numpy as np
 import warnings
+import pandas as pd
+from pandas_profiling import ProfileReport
+
 warnings.filterwarnings("ignore")
 
 model = pickle.load(open('model.pkl', 'rb'))
@@ -239,3 +242,9 @@ def prediction():
 
 
     return render_template('prediction.html', title='input_predic', form=form, legend='Predict')
+
+
+@app.route("/dashboard", methods=['GET', 'POST'])
+@login_required
+def dashboard():
+    return render_template('analysis.html')

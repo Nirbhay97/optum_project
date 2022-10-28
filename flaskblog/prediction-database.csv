@@ -1,0 +1,504 @@
+S. No.,Disease Name,Level_mother,Level_Father,Probablity in Child,Tests,Symptoms ,Specialist
+1,cancer,0.04,0.59,0.47,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+2,Alzheimer's disease,0.58,0.71,0.84,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+3,Arthritis,0.51,0.48,0.56,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+4,Cancer,0.36,0.49,0.51,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+5,Dementia,0.24,0.72,0.7,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+6,Diabetes,0.4,0.42,0.44,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+7,Heart disease,0.81,0.55,0.76,"ECG, cardiac CT scan, cardiac MRI","chest pain, shortness of breath, pain in the neck, jaw and back",cardiologist
+8,High blood pressure,0.71,0.53,0.7,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+9,Multiple sclerosis,0.25,0.22,0.17,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+10,Parkinson's disease,0.47,0.72,0.79,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+11,Spina bifida,0.48,0.69,0.77,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+12,Thyroid disorders,0.01,0.66,0.54,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+13,Parkinson's disease,0.65,0.35,0.48,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+14,Diabetes,0.33,0.54,0.55,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+15,Alzheimer's disease,0.52,0.35,0.42,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+16,Arthritis,0.44,0.54,0.59,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+17,Cancer,0.62,0.41,0.54,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+18,High blood pressure,0.33,0.55,0.56,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+19,Diabetes,0.51,0.69,0.78,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+20,Heart disease,0.46,0.28,0.33,"ECG, cardiac CT scan, cardiac MRI","chest pain, shortness of breath, pain in the neck, jaw and back",cardiologist
+21,Dementia,0.53,0.75,0.86,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+22,Multiple sclerosis,0.64,0.25,0.36,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+23,Spina bifida,0.62,0.51,0.64,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+24,Thyroid disorders,0.81,0.48,0.69,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+25,Dementia,0.51,0.21,0.27,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+26,Arthritis,0.34,0.52,0.53,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+27,Dementia,0.77,0.36,0.54,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+28,Heart disease,0.42,0.46,0.5,"ECG, cardiac CT scan, cardiac MRI","chest pain, shortness of breath, pain in the neck, jaw and back",cardiologist
+29,Dementia,0.54,0.74,0.86,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+30,Parkinson's disease,0,0.85,0.74,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+31,Multiple sclerosis,0.61,0.16,0.26,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+32,Spina bifida,0.47,0.64,0.71,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+33,Arthritis,0.17,0.57,0.51,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+34,Heart disease,0.55,0.51,0.61,"ECG, cardiac CT scan, cardiac MRI","chest pain, shortness of breath, pain in the neck, jaw and back",cardiologist
+35,Cancer,0.47,0.77,0.86,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+36,Dementia,0.26,0.41,0.38,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+37,Arthritis,0.19,0.95,0.92,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+38,Spina bifida,0.14,0.65,0.58,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+39,Alzheimer's disease,0.6,0.67,0.8,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+40,Multiple sclerosis,0.55,0.68,0.79,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+41,High blood pressure,0.61,0.45,0.57,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+42,Thyroid disorders,0.28,0.1,0.06,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+43,Arthritis,0.51,0.45,0.52,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+44,Heart disease,0.29,0.57,0.56,"ECG, cardiac CT scan, cardiac MRI","chest pain, shortness of breath, pain in the neck, jaw and back",cardiologist
+45,High blood pressure,0.32,0.96,0.99,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+46,Diabetes,0.34,0.86,0.9,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+47,Multiple sclerosis,0.26,0.69,0.68,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+48,Spina bifida,0.63,0.55,0.69,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+49,Multiple sclerosis,0.5,0.08,0.13,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+50,Alzheimer's disease,0.26,0.41,0.37,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+51,Alzheimer's disease,0.27,0.67,0.66,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+52,Dementia,0.3,0.51,0.51,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+53,Thyroid disorders,0.27,0.61,0.6,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+54,Cancer,0.12,0.64,0.57,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+55,Parkinson's disease,0.26,0.57,0.55,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+56,Heart disease,0.58,0.48,0.59,"ECG, cardiac CT scan, cardiac MRI","chest pain, shortness of breath, pain in the neck, jaw and back",cardiologist
+57,Dementia,0.18,0.79,0.75,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+58,Arthritis,0.16,0.7,0.65,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+59,Thyroid disorders,0.47,0.68,0.76,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+60,cancer,0.51,0.61,0.7,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+61,Heart disease,0.23,0.53,0.49,"ECG, cardiac CT scan, cardiac MRI","chest pain, shortness of breath, pain in the neck, jaw and back",cardiologist
+62,Alzheimer's disease,0.43,0.79,0.86,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+63,Thyroid disorders,0.45,0.7,0.76,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+64,Arthritis,0.3,0.6,0.59,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+65,Diabetes,0.23,0.66,0.63,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+66,Alzheimer's disease,0.76,0.46,0.64,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+67,High blood pressure,0.33,0.47,0.48,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+68,Spina bifida,0.65,0.54,0.69,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+69,Multiple sclerosis,0.45,0.32,0.37,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+70,Arthritis,0.55,0.51,0.61,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+71,Dementia,0.37,0.62,0.64,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+72,Diabetes,0.53,0.61,0.71,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+73,Alzheimer's disease,0.31,0.19,0.16,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+74,High blood pressure,0.24,1,1,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+75,Parkinson's disease,0.9,0.44,0.69,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+76,Heart disease,0.33,0.86,0.89,"ECG, cardiac CT scan, cardiac MRI","chest pain, shortness of breath, pain in the neck, jaw and back",cardiologist
+77,Dementia,0,0.69,0.57,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+78,Cancer,0.3,0.48,0.47,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+79,Spina bifida,0.54,0.4,0.49,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+80,Parkinson's disease,0.36,0.44,0.45,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+81,Thyroid disorders,0.45,0.65,0.71,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+82,Alzheimer's disease,0.32,0.7,0.72,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+83,Diabetes,0.5,0.76,0.85,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+84,Arthritis,0.53,0.68,0.79,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+85,Dementia,0.37,0.15,0.15,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+86,Arthritis,0.41,0.37,0.39,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+87,Multiple sclerosis,0.69,0.55,0.71,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+88,Parkinson's disease,0.48,0.49,0.56,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+89,Multiple sclerosis,0.56,0.72,0.84,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+90,High blood pressure,0.25,0.64,0.62,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+91,Cancer,0.06,0.5,0.39,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+92,Parkinson's disease,0.28,0.47,0.45,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+93,Spina bifida,0.75,0.54,0.72,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+94,Arthritis,0.49,0.36,0.42,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+95,Parkinson's disease,0.17,0.41,0.34,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+96,Dementia,0.48,0.45,0.51,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+97,Arthritis,0.52,0.3,0.37,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+98,Alzheimer's disease,0.48,0.82,0.91,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+99,Diabetes,0.31,0.63,0.64,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+100,Alzheimer's disease,0.18,0.62,0.57,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+101,Dementia,0.71,0.78,0.96,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+102,High blood pressure,0.39,0.38,0.4,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+103,Diabetes,0.49,0.39,0.46,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+104,Arthritis,0.49,0.44,0.51,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+105,Dementia,0.24,0.83,0.82,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+106,cancer,0.09,0.62,0.53,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+107,Thyroid disorders,0.44,0.22,0.25,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+108,cancer,0.47,0.66,0.73,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+109,Parkinson's disease,0.64,0.56,0.7,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+110,High blood pressure,0.26,0.41,0.38,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+111,Diabetes,0.38,0.49,0.51,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+112,Spina bifida,0.75,0.47,0.65,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+113,Alzheimer's disease,0.2,0.71,0.67,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+114,Arthritis,0.05,0.56,0.45,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+115,High blood pressure,0.51,0.7,0.79,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+116,Multiple sclerosis,0.4,0.78,0.83,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+117,Alzheimer's disease,0.4,0.54,0.58,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+118,Diabetes,0.4,0,0,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+119,Thyroid disorders,0.34,0.95,0.99,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+120,Dementia,0.43,0.5,0.55,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+121,Cancer,0.27,0.16,0.12,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+122,Spina bifida,0.7,0.75,0.93,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+123,High blood pressure,0.67,0.63,0.79,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+124,Alzheimer's disease,0.45,0.53,0.59,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+125,Dementia,0.44,0.53,0.59,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+126,Arthritis,0.76,0.44,0.63,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+127,Spina bifida,0.25,0.25,0.2,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+128,Diabetes,0.72,0.5,0.67,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+129,Parkinson's disease,0.52,0.5,0.59,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+130,cancer,0.52,0.16,0.22,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+131,Parkinson's disease,0.4,0.31,0.33,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+132,Thyroid disorders,0.71,0.33,0.48,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+133,Parkinson's disease,0.46,0.59,0.65,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+134,Dementia,0.34,0.3,0.29,"Cognitive and neurological tests,Brain scan","memory loss, difficulty in concentrating,confusion, mood changes",Neurologist
+135,Diabetes,0.24,0.54,0.51,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+136,Alzheimer's disease,0.31,0.59,0.59,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+137,Multiple sclerosis,0.57,0.79,0.92,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+138,Thyroid disorders,0.71,0.72,0.9,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+139,Spina bifida,0.34,0.64,0.66,MSAFP Test,"weakness or total paralysis of legs, bowel incontinence, loss of skin sensation in legs",specialist in pediatric urology
+140,Cancer,0.45,0.56,0.62,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+141,Parkinson's disease,0.33,0.51,0.51,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+142,Thyroid disorders,0.22,0.41,0.36,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+143,Parkinson's disease,0.83,0.68,0.91,"SPECT Scan, DAT scan","tremor, slowed movement, rigid muscles, impaired posture",Neurologist
+144,Arthritis,0.5,0.36,0.42,"Blood tests - ESR, CRP","fatigue, fever, loss of apetite,swollen joints, joint stiffness",Rheumatologists
+145,Multiple sclerosis,0.31,0.82,0.83,MRI Scan,"loss of vision, loss of power in arm, numbness in leg",Neurologist
+146,Cancer,0.43,0.76,0.82,"Blood tests - CBC, tumor marker Imaging tests  -CT Scan , MRI","weight loss, fatigue, fever, skin changes",pathologist
+147,High blood pressure,1,0.33,0.6,"Ambulatory monitoring blood and urine tests, ECG","dizziness, nervousness, sweating, trouble sleeping",cardiologist
+148,Alzheimer's disease,0.54,0.6,0.7,"brain imaging tests -MRI , CT, PET","forgetting recent events, misplacing items, asking questions repetetively",neurologist or geriatrician
+149,Diabetes,0.1,0.6,0.51,A1C Test,"very thirsty, very hungry, weight loss, urinate alot",endocrinologist
+150,Thyroid disorders,0.6,0.34,0.34,"TSH, T3-T4,TSI, antithyroid antibody test","fatigue, constipation, dry skin, weight gain",endocrinologist
+151,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+266,,,,,,,
+267,,,,,,,
+268,,,,,,,
+269,,,,,,,
+270,,,,,,,
+271,,,,,,,
+272,,,,,,,
+273,,,,,,,
+274,,,,,,,
+275,,,,,,,
+276,,,,,,,
+277,,,,,,,
+278,,,,,,,
+279,,,,,,,
+280,,,,,,,
+281,,,,,,,
+282,,,,,,,
+283,,,,,,,
+284,,,,,,,
+285,,,,,,,
+286,,,,,,,
+287,,,,,,,
+288,,,,,,,
+289,,,,,,,
+290,,,,,,,
+291,,,,,,,
+292,,,,,,,
+293,,,,,,,
+294,,,,,,,
+295,,,,,,,
+296,,,,,,,
+297,,,,,,,
+298,,,,,,,
+299,,,,,,,
+300,,,,,,,
+301,,,,,,,
+302,,,,,,,
+303,,,,,,,
+304,,,,,,,
+305,,,,,,,
+306,,,,,,,
+307,,,,,,,
+308,,,,,,,
+309,,,,,,,
+310,,,,,,,
+311,,,,,,,
+312,,,,,,,
+313,,,,,,,
+314,,,,,,,
+315,,,,,,,
+316,,,,,,,
+317,,,,,,,
+318,,,,,,,
+319,,,,,,,
+320,,,,,,,
+321,,,,,,,
+322,,,,,,,
+323,,,,,,,
+324,,,,,,,
+325,,,,,,,
+326,,,,,,,
+327,,,,,,,
+328,,,,,,,
+329,,,,,,,
+330,,,,,,,
+331,,,,,,,
+332,,,,,,,
+333,,,,,,,
+334,,,,,,,
+335,,,,,,,
+336,,,,,,,
+337,,,,,,,
+338,,,,,,,
+339,,,,,,,
+340,,,,,,,
+341,,,,,,,
+342,,,,,,,
+343,,,,,,,
+344,,,,,,,
+345,,,,,,,
+346,,,,,,,
+347,,,,,,,
+348,,,,,,,
+349,,,,,,,
+350,,,,,,,
+351,,,,,,,
+352,,,,,,,
+353,,,,,,,
+354,,,,,,,
+355,,,,,,,
+356,,,,,,,
+357,,,,,,,
+358,,,,,,,
+359,,,,,,,
+360,,,,,,,
+361,,,,,,,
+362,,,,,,,
+363,,,,,,,
+364,,,,,,,
+365,,,,,,,
+366,,,,,,,
+367,,,,,,,
+368,,,,,,,
+369,,,,,,,
+370,,,,,,,
+371,,,,,,,
+372,,,,,,,
+373,,,,,,,
+374,,,,,,,
+375,,,,,,,
+376,,,,,,,
+377,,,,,,,
+378,,,,,,,
+379,,,,,,,
+380,,,,,,,
+381,,,,,,,
+382,,,,,,,
+383,,,,,,,
+384,,,,,,,
+385,,,,,,,
+386,,,,,,,
+387,,,,,,,
+388,,,,,,,
+389,,,,,,,
+390,,,,,,,
+391,,,,,,,
+392,,,,,,,
+393,,,,,,,
+394,,,,,,,
+395,,,,,,,
+396,,,,,,,
+397,,,,,,,
+398,,,,,,,
+399,,,,,,,
+400,,,,,,,
+401,,,,,,,
+402,,,,,,,
+403,,,,,,,
+404,,,,,,,
+405,,,,,,,
+406,,,,,,,
+407,,,,,,,
+408,,,,,,,
+409,,,,,,,
+410,,,,,,,
+411,,,,,,,
+412,,,,,,,
+413,,,,,,,
+414,,,,,,,
+415,,,,,,,
+416,,,,,,,
+417,,,,,,,
+418,,,,,,,
+419,,,,,,,
+420,,,,,,,
+421,,,,,,,
+422,,,,,,,
+423,,,,,,,
+424,,,,,,,
+425,,,,,,,
+426,,,,,,,
+427,,,,,,,
+428,,,,,,,
+429,,,,,,,
+430,,,,,,,
+431,,,,,,,
+432,,,,,,,
+433,,,,,,,
+434,,,,,,,
+435,,,,,,,
+436,,,,,,,
+437,,,,,,,
+438,,,,,,,
+439,,,,,,,
+440,,,,,,,
+441,,,,,,,
+442,,,,,,,
+443,,,,,,,
+444,,,,,,,
+445,,,,,,,
+446,,,,,,,
+447,,,,,,,
+448,,,,,,,
+449,,,,,,,
+450,,,,,,,
+451,,,,,,,
+452,,,,,,,
+453,,,,,,,
+454,,,,,,,
+455,,,,,,,
+456,,,,,,,
+457,,,,,,,
+458,,,,,,,
+459,,,,,,,
+460,,,,,,,
+461,,,,,,,
+462,,,,,,,
+463,,,,,,,
+464,,,,,,,
+465,,,,,,,
+466,,,,,,,
+467,,,,,,,
+468,,,,,,,
+469,,,,,,,
+470,,,,,,,
+471,,,,,,,
+472,,,,,,,
+473,,,,,,,
+474,,,,,,,
+475,,,,,,,
+476,,,,,,,
+477,,,,,,,
+478,,,,,,,
+479,,,,,,,
+480,,,,,,,
+481,,,,,,,
+482,,,,,,,
+483,,,,,,,
+484,,,,,,,
+485,,,,,,,
+486,,,,,,,
+487,,,,,,,
+488,,,,,,,
+489,,,,,,,
+490,,,,,,,
+491,,,,,,,
+492,,,,,,,
+493,,,,,,,
+494,,,,,,,
+495,,,,,,,
+496,,,,,,,
+497,,,,,,,
+498,,,,,,,
+499,,,,,,,
+500,,,,,,,
+501,,,,,,,
+502,,,,,,,
+503,,,,,,,
