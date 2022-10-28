@@ -30,7 +30,9 @@
                  background-attachment: fixed;
 
         </style>
+
     {% elif title=='Account' %}
+
         <title>optum project</title>
          <style>
            body {
@@ -59,18 +61,21 @@
         </style>
     {% endif %}
 
-
 </head>
-
-
 
 <body>
 
 <div >
+
 <header class="site-header">
   <nav class="navbar round-navbar navbar-expand-md bg-steel fixed-top">
     <div class="container round-navbar">
-      <a class="navbar-brand mr-4" href="/"><i class="fa fa-car"></i></a>
+
+        <a class="navbar-brand mr-4" href="/">
+          <i class="fa fa-car"></i>
+<!--                <img src="static\pics\navbar-one.svg" />-->
+      </a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -79,14 +84,17 @@
 
               <a class="nav-item nav-link " href="{{ url_for('home') }} ">
                          <button type="button" class="btn btn-light custom-btn" >
-                              <i class="fa fa-home fa-1.3x" aria-hidden="true"></i>
+                             <i class="fa fa-home fa-1.3x" aria-hidden="true"></i>
+<!--                                <img src="static\pics\navbar-one.svg" />-->
                          </button>
-
               </a>
 
           <a class="nav-item nav-link" href="/about">
               <button type="button" class="btn btn-light custom-btn" >
-                  <i class="fa fa-info-circle fa-1.3x" aria-hidden="true"></i>
+                  <i class="fa fa-info-circle fa-6x" aria-hidden="true"></i>
+<!--                     <img src="static\pics\navbar-two.svg" />-->
+<!--                  <object type="image/svg+xml" data="static\pics\navbar-two.svg"></object>-->
+
               </button>
 
           </a>

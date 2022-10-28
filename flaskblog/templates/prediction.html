@@ -7,41 +7,54 @@
          {{ form.hidden_tag() }}
 
          <fieldset class = "form-group font-weight-bold">
-             <legend class="border-bottom mb-4">{{ legend }} </legend>
+             <legend class="border-bottom mb-4 title_shift_middle">
+                 <center>
+                      {{ legend }}
+                 </center>
 
-             <div class="form-group font-weight-bold" style="float:left">
-                <img src="static\pics\first.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;float:left">
-                {% if form.disease.errors %}}
-                  {{ form.disease(class="form-control form-control-lg is-invalid") }}
-                  <div  class = "invalid-feedback">
-                     {% for errors in form.disease.errors %}
-                        <span>{{ error }}</span>
-                     {% endfor %}
-                  </div>
-               {% else %}
-               {{ form.disease(class="form-control rounded-pill form-control-lg") }}
-               {% endif %}
-            </div>
+             </legend>
+             <div class="vl"></div>
+             <div class="form-group font-weight-bold parent" >
+                    <div class="child shift-input-col1">
+                    <img src="static\pics\first.svg" class="img-thumbnail rounded-circle" width="50" height="50" >
+                    </div>
+                    <div class="child ">
+                    {% if form.disease.errors %}}
+                      {{ form.disease(class="form-control form-control is-invalid") }}
+                      <div  class = "invalid-feedback">
+                         {% for errors in form.disease.errors %}
+                            <span>{{ error }}</span>
+                         {% endfor %}
+                      </div>
+                   {% else %}
+                   {{ form.disease(class="form-control rounded-pill form-control", placeholder="Disease Name") }}
+                   {% endif %}
+                     </div>
+                 </div>
 
-
-
-            <div class="form-group font-weight-bold">
-               <img src="static\pics\predict-mom.svg" class="img-thumbnail rounded-circle" width="43" height="43" style="background-color: lightblue;float:left">
+            <div class="form-group font-weight-bold parent" >
+                <div class="child shift-input-col1">
+               <img src="static\pics\predict-mom.svg" class="img-thumbnail rounded-circle" width="50" height="20">
+                </div>
+                <div class="child">
                 {% if form.mom.errors %}}
-                  {{ form.mom(class="form-control form-control-lg is-invalid") }}
+                  {{ form.mom(class="form-control form-control is-invalid") }}
                   <div  class = "invalid-feedback">
                      {% for errors in form.mom.errors %}
                         <span>{{ error }}</span>
                      {% endfor %}
                   </div>
                {% else %}
-               {{ form.mom(class="form-control form-control-lg") }}
+               {{ form.mom(class="form-control rounded-pill form-control", placeholder="Mother's Chances") }}
                {% endif %}
             </div>
+            </div>
 
-            <div class="form-group font-weight-bold">
-                <img src="static\pics\predict-two.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;float:left">
-
+            <div class="form-group font-weight-bold parent">
+                <div class="child shift-input-col1">
+                <img src="static\pics\predict-two.svg" class="img-thumbnail rounded-circle" width="50" height="50" >
+                </div>
+                <div class="child">
                 {% if form.dad.errors %}}
                   {{ form.dad(class="form-control form-control-lg is-invalid") }}
                   <div  class = "invalid-feedback">
@@ -50,10 +63,10 @@
                      {% endfor %}
                   </div>
                {% else %}
-               {{ form.dad(class="form-control form-control-lg") }}
+               {{ form.dad(class="form-control rounded-pill form-control", placeholder="Father's Chances") }}
                {% endif %}
             </div>
-
+                </div>
 
          </fieldset>
             <div class="form-group font-weight-bold text-center font-weight-bold" style="text-color:white;">

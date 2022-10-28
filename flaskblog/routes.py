@@ -41,16 +41,28 @@ symptoms = {
     "thyroid disorders": ["fatigue", "constipation", "dry skin", "weight gain"]
 }
 
+specialists = {
 
+    "cancer": ["pathologist"],
+    "Alzheimer's disease": ["neurologist or geriatrician"],
+    "Arthritis": ["Rheumatologists"],
+    "Dementia": ["Neurologist"],
+    "Diabetes": ["endocrinologist"],
+    "Heart disease": ["cardiologist"],
+    "High blood pressure": ["cardiologist"],
+    "Multiple sclerosis": ["Neurologist"],
+    "Parkinson's disease": ["Neurologist"],
+    "Spina bifida": ["specialist in pediatric urology"],
+    "Thyroid disorders": ["endocrinologist"],
+    "Parkinson's disease": ["Neurologist"]
+
+}
 
 @app.route("/")
 @app.route("/home")
 def home():
     posts = Post.query.all()
     return render_template('home.html', posts=posts)
-
-
-# added by Rish
 
 
 @app.route("/about")
@@ -135,7 +147,7 @@ def new_post():
         db.session.commit()
         flash('your post has been created', 'success') #here success is bootstrap class // documentation nk
         return redirect(url_for('home'))
-    return render_template('create_post.html', title='New Post', form=form, legend='new_post')
+    return render_template('create_post.html', title='New Post', form=form, legend='New Post', current_user=current_user)
 
 
 @app.route("/post/<int:post_id>")
@@ -159,7 +171,7 @@ def update_post(post_id):
     elif request.method == 'GET':
         form.title.data = post.title
         form.content.data = post.content
-    return render_template('create_post.html', title='update_post', form=form, legend='update_post')
+    return render_template('create_post.html', title='Update Post', form=form, legend='Update Post')
 
 @app.route("/post/<int:post_id>/delete", methods=['POST'])
 @login_required
@@ -190,9 +202,10 @@ def prediction():
         p = round(model.predict([arr])[0], 2)
         test = []
         sysm = []
-        #specialist = []
+        specialist = []
         disease_catr = ""
         #nikitha_test(predict, disease, test, sysm, disease_catr)
+        specialist = specialists[dis]
         if p < .17:
             test.append(tests[dis][0])
             sysm.append(symptoms[dis[0]])
@@ -222,7 +235,7 @@ def prediction():
         print("hey")
 
         #flash('prob is  {}'.format(p))
-        return render_template('predict_out.html', disease_catr=disease_catr, disease=dis, test=test, sysm=sysm, title='Analysis')
+        return render_template('predict_out.html', disease_catr=disease_catr, disease=dis, test=test, sysm=sysm, specialist=specialist, title='Analysis')
 
 
     return render_template('prediction.html', title='input_predic', form=form, legend='Predict')

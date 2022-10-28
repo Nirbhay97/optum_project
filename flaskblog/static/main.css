@@ -124,6 +124,7 @@ z-index: 10
 
 .btn-light{
     background:#dfeaf5
+
 }
 
 .navbar{
@@ -166,16 +167,17 @@ padding: .16rem 1rem
 
 .boxed {
   border: 0px solid green ;
-  background-color : white;
+  background-color: #dfeaf5;
   border-radius: 5px
 }
 
 .button-cus{
-    width: 220px;
-    background: #74D8CE;
+    width: 180px;
+    background: #77D8c0;
     border: 1px solid #74D8CE;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    margin-left: 2rem;
 }
 
 .button-bg{
@@ -217,4 +219,75 @@ padding: .16rem 1rem
 
 .nav-item{
     margin-right: 1rem
+}
+
+.img-thumbnail {
+    padding: 0.2rem;
+    background-color: #dfeaf5;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: 50px;
+
+}
+
+.parent {
+
+  padding: 1rem ;
+  margin-left: 2rem
+
+}
+.child {
+  display: inline-block;
+
+}
+.shift-input-col1{
+margin-right: 1rem
+}
+
+.vl {
+  border-left: 2px solid white;
+  height: 220px;
+  position: absolute;
+  left: 24%;
+  margin-left: -3px;
+  top: 6rem;
+  z-index:-1
+}
+
+.title_shift_middle{
+    text: center
+}
+
+.button-cus-pre{
+    width: 200px;
+    background: #74D8CE;
+    border: 1px solid #74D8CE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+}
+
+.create-post-img{
+    border-radius: 6px
+
+}
+.border-bottom-no{
+    color:#74D8CE
+}
+
+.border-added{
+    border: 5px solid red;
+
+}
+.make-bold{
+font-weight: bold
+}
+
+.btn-delete:hover{
+    cursor: pointer;
+}
+
+.media-body{
+    margin-top: 2.7rem
 }

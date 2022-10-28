@@ -9,7 +9,7 @@
   </h1>
 
 
-<div class="boxed align-items-center justify-content-center " style="fill: #FFFFFF;opacity:0.69;text-align : center; margin-top : 20px">
+<div class="boxed align-items-center justify-content-center " style="fill: #FFFFFF;opacity:1;text-align : center; margin-top : 20px">
 
 
   <div class="btn-group-vertical d-grid gap-4" style="text-align : center;">
@@ -17,7 +17,7 @@
       <div class="btn btn-default">
         <label for="cc">
         <img src="static\pics\first.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
-            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 0px; margin-top : 15px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+            <button type="button" class="button-cus-pre btn addtrans btn-primary rounded-pill" style="margin-bottom: 0px; margin-top : 15px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
       Possible Diseases
     </button>
         </label>
@@ -27,7 +27,7 @@
      <div class="btn btn-default">
         <label for="cc">
         <img src="static\pics\second.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
-            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+            <button type="button" class="button-cus-pre btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#chancesofinheritance">
                 Chances of Inheritance
             </button>
         </label>
@@ -36,7 +36,7 @@
      <div class="btn btn-default">
         <label for="cc">
         <img src="static\pics\third.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
-            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+            <button type="button" class="button-cus-pre btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#recommendedtests">
      Recommended Tests
     </button>
         </label>
@@ -46,7 +46,7 @@
      <div class="btn btn-default">
         <label for="cc">
         <img src="static\pics\fourth.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
-            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+            <button type="button" class="button-cus-pre btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possiblesymptoms">
       Possible Symptoms
     </button>
         </label>
@@ -55,7 +55,7 @@
      <div class="btn btn-default">
         <label for="cc">
         <img src="static\pics\fifth.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
-            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+            <button type="button" class="button-cus-pre btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#specialisttoconsult">
          Specialist To Consult
     </button>
         </label>
@@ -160,5 +160,28 @@
     </div>
   </div>
 </div>
+
+
+
+
+<div class="modal fade" id="specialisttoconsult" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Specialist</h5>
+
+      </div>
+      <div class="modal-body">
+          <ul>
+
+          <li> {{ specialist[0] }} </li>
+
+      </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 {% endblock content %}
