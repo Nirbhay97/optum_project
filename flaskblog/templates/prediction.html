@@ -1,13 +1,16 @@
 {% extends "layout.html" %}
+
+
 {% block content %}
-<div class = "content-section">
+<div class = "content-section" style="fill: #FFFFFF;opacity:0.8;  background: #74D8CE;;margin-top : 20px">
       <form method="POST" action = "">
          {{ form.hidden_tag() }}
-         <fieldset class = "form-group">
-            <legend class="border-bottom mb-4">{{ legend }} </legend>
 
-             <div class="form-group">
-               {{ form.disease.label(class = "form-control-label") }}
+         <fieldset class = "form-group font-weight-bold">
+             <legend class="border-bottom mb-4">{{ legend }} </legend>
+
+             <div class="form-group font-weight-bold" style="float:left">
+                <img src="static\pics\first.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;float:left">
                 {% if form.disease.errors %}}
                   {{ form.disease(class="form-control form-control-lg is-invalid") }}
                   <div  class = "invalid-feedback">
@@ -16,12 +19,14 @@
                      {% endfor %}
                   </div>
                {% else %}
-               {{ form.disease(class="form-control form-control-lg") }}
+               {{ form.disease(class="form-control rounded-pill form-control-lg") }}
                {% endif %}
             </div>
 
-            <div class="form-group">
-               {{ form.mom.label(class = "form-control-label") }}
+
+
+            <div class="form-group font-weight-bold">
+               <img src="static\pics\predict-mom.svg" class="img-thumbnail rounded-circle" width="43" height="43" style="background-color: lightblue;float:left">
                 {% if form.mom.errors %}}
                   {{ form.mom(class="form-control form-control-lg is-invalid") }}
                   <div  class = "invalid-feedback">
@@ -33,8 +38,10 @@
                {{ form.mom(class="form-control form-control-lg") }}
                {% endif %}
             </div>
-            <div class="form-group">
-               {{ form.dad.label(class = "form-control-label") }}
+
+            <div class="form-group font-weight-bold">
+                <img src="static\pics\predict-two.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;float:left">
+
                 {% if form.dad.errors %}}
                   {{ form.dad(class="form-control form-control-lg is-invalid") }}
                   <div  class = "invalid-feedback">
@@ -49,10 +56,10 @@
 
 
          </fieldset>
-         <div class="form-group">
-            {{ form.submit(class = "btn btn-outline-info") }}
-         </div>
-      </form>
+            <div class="form-group font-weight-bold text-center font-weight-bold" style="text-color:white;">
+                {{ form.submit(class = "button-cus btn-primary") }}
+             </div>
+         </form>
 </div>
 
 {% endblock content %}

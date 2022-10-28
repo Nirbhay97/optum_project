@@ -1,34 +1,70 @@
 {% extends "layout.html" %}
+
 {% block content %}
 <script src="{{ url_for('static', filename='temp.js')}}"></script>
 
 
-<div class="btn-group-vertical d-grid gap-3 " style="margin-left: -200px;">
-
-  <h2 class="card-title font-weight-bold  text-white-50" style="margin-bottom: 40px margin-left: -10px;">
+  <h1  style="margin-bottom: 50px; margin-top : 30px;text-align : center;font-weight: 700; font-size:30px;font-family: 'Inter';font-style: normal;">
     Analysis Section
-  </h2>
-
-<button type="button" class="btn addtrans btn-primary border border-2 rounded-pill" style="margin-bottom: 40px;" data-toggle="modal" data-target="#possibledisease">
-   Possible Diseases
-</button>
+  </h1>
 
 
-<button type="button" class="btn addtrans btn-primary border border-2 rounded-pill" style="margin-bottom: 40px;" data-toggle="modal" data-target="#chancesofinheritance">
-  Chances of Inheritance
-</button>
+<div class="boxed align-items-center justify-content-center " style="fill: #FFFFFF;opacity:0.69;text-align : center; margin-top : 20px">
 
 
-<button type="button" class="btn addtrans btn-primary border border-2 rounded-pill" style="margin-bottom: 40px;" data-toggle="modal" data-target="#recommendedtests">
-  Recommended Tests
-</button>
+  <div class="btn-group-vertical d-grid gap-4" style="text-align : center;">
+
+      <div class="btn btn-default">
+        <label for="cc">
+        <img src="static\pics\first.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
+            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 0px; margin-top : 15px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+      Possible Diseases
+    </button>
+        </label>
+        </div>
 
 
-<button type="button" class="btn addtrans btn-primary border border-3 rounded-pill"  style="margin-bottom: 20px;" data-toggle="modal" data-target="#possiblesymptoms">
-   Possible Symptoms
-</button>
+     <div class="btn btn-default">
+        <label for="cc">
+        <img src="static\pics\second.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
+            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+                Chances of Inheritance
+            </button>
+        </label>
+        </div>
+
+     <div class="btn btn-default">
+        <label for="cc">
+        <img src="static\pics\third.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
+            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+     Recommended Tests
+    </button>
+        </label>
+        </div>
+
+
+     <div class="btn btn-default">
+        <label for="cc">
+        <img src="static\pics\fourth.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
+            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+      Possible Symptoms
+    </button>
+        </label>
+        </div>
+
+     <div class="btn btn-default">
+        <label for="cc">
+        <img src="static\pics\fifth.svg" class="img-thumbnail rounded-circle" width="50" height="50" style="background-color: lightblue;">
+            <button type="button" class="button-cus btn addtrans btn-primary rounded-pill" style="margin-bottom: 10px; margin-top : 10px;margin-left : 20px;background-color : #74D8CE;" data-toggle="modal" data-target="#possibledisease">
+         Specialist To Consult
+    </button>
+        </label>
+        </div>
+
+  </div>
 
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="possibledisease" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -86,7 +122,9 @@
         <h5 class="modal-title" id="exampleModalLongTitle">Possible Symptoms</h5>
 
       </div>
+
       <div class="modal-body">
+
       <ul>
         {% for i in sysm %}
           <li> {{ i }} </li>

@@ -50,6 +50,9 @@ def home():
     return render_template('home.html', posts=posts)
 
 
+# added by Rish
+
+
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
@@ -217,8 +220,9 @@ def prediction():
         print(test)
         print(sysm)
         print("hey")
+
         #flash('prob is  {}'.format(p))
-        return render_template('predict_out.html', disease_catr=disease_catr, disease=dis, test=test, sysm=sysm)
+        return render_template('predict_out.html', disease_catr=disease_catr, disease=dis, test=test, sysm=sysm, title='Analysis')
 
 
-    return render_template('prediction.html', title='New Post', form=form, legend='Predict')
+    return render_template('prediction.html', title='input_predic', form=form, legend='Predict')

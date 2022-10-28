@@ -4,35 +4,61 @@
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel = "stylesheet" type="text/css" href = "{{ url_for('static', filename='main.css')}}" >
-    <link rel = "stylesheet" type="text/css" href = "{{ url_for('static', filename='bodyback.css')}}" >
-    <!-- materialise css
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- <link rel = "stylesheet" type="text/css" href = "{{ url_for('static', filename='bodyback.css')}}" > -->
+<!--    materialise css-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    -->
+<!--    &ndash;&gt;-->
 
-    {% if title %}
-    <title>blog - {{ title }}</title>
+    {% if title =='Analysis' or title =='input_predic' %}
+        <title>blog - {{ title }}</title>
+         <style>
+           body {
+                 background-image: url("{{ url_for('static', filename='pics/medicines.png') }}");
+                 margin-top: 5rem;
+                 width:100%
+                 height: 100%
+
+                 background-repeat: no-repeat;
+                 background-attachment: fixed;
+
+        </style>
+    {% elif title=='Account' %}
+        <title>optum project</title>
+         <style>
+           body {
+                 background-image: url("{{ url_for('static', filename='pics/lovemedici.png') }}");
+                 margin-top: 5rem;
+                 width:100%
+                 height: 100%
+
+                 background-repeat: no-repeat;
+                 background-attachment: fixed;
+
+        </style>
+
     {% else %}
-    <title>optum project</title>
+        <title>optum project</title>
+         <style>
+           body {
+                 background-image: url("{{ url_for('static', filename='pics/Mask group-home.png') }}");
+                 margin-top: 5rem;
+                 width:100%
+                 height: 100%
+
+                 background-repeat: no-repeat;
+                 background-attachment: fixed;
+
+        </style>
     {% endif %}
-    <style>
-       body {
-             background-image: url("{{ url_for('static', filename='pics/additto.jpg') }}");
-             margin-top: 5rem;
-             width:100%
-             height: 100%
 
-             background-repeat: no-repeat;
-             background-attachment: fixed;
-}
-
-
-    </style>
 
 </head>
 
@@ -42,34 +68,77 @@
 
 <div >
 <header class="site-header">
-  <nav class="navbar navbar-expand-md bg-steel fixed-top">
-    <div class="container">
-      <a class="navbar-brand mr-4" href="/">Nirbhay</a>
+  <nav class="navbar round-navbar navbar-expand-md bg-steel fixed-top">
+    <div class="container round-navbar">
+      <a class="navbar-brand mr-4" href="/"><i class="fa fa-car"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarToggle">
         <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link" href="{{ url_for('home') }} ">Home</a>
-          <a class="nav-item nav-link" href="/about">About</a>
+
+              <a class="nav-item nav-link " href="{{ url_for('home') }} ">
+                         <button type="button" class="btn btn-light custom-btn" >
+                              <i class="fa fa-home fa-1.3x" aria-hidden="true"></i>
+                         </button>
+
+              </a>
+
+          <a class="nav-item nav-link" href="/about">
+              <button type="button" class="btn btn-light custom-btn" >
+                  <i class="fa fa-info-circle fa-1.3x" aria-hidden="true"></i>
+              </button>
+
+          </a>
+
         </div>
         <!-- Navbar Right Side -->
         <div class="navbar-nav">
             {% if current_user.is_authenticated %}
                 <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="{{ url_for('prediction') }}">Prediction</a>
-                    <a class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
-                </div>
-                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Account
-               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{ url_for('account') }}">Setting</a></li>
-                <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
-              </ul>
-             </li>
 
+                          <a class="nav-item nav-link" href="{{ url_for('prediction') }}">
+
+                           <button type="button" class="btn btn-light custom-btn">
+                                PREDICTION
+                            </button>
+
+                        </a>
+
+
+                        <a class="nav-item nav-link" href="{{ url_for('new_post') }}">
+                            <button type="button" class="btn btn-light custom-btn">
+                                NEW POST
+                            </button>
+                        </a>
+
+                </div>
+
+            <div class="dropdown nikithacss">
+                  <a class="btn purenikitha dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Account
+                  </a>
+
+                  <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="{{ url_for('account') }}">Setting</a>
+                    <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
+
+                  </div>
+            </div>
+
+<!--                <div class="custom-dropdown">-->
+<!--                     <li class="nav-item dropdown">-->
+
+<!--                             <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                 Account-->
+<!--                                 <ul class="dropdown-menu">-->
+<!--                                <a class="dropdown-item" href="{{ url_for('account') }}">Setting</a>-->
+<!--                                <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>-->
+<!--                                </ul>-->
+<!--                             </a>-->
+
+<!--                     </li>-->
+<!--                </div>-->
             {% else %}
               <a class="nav-item nav-link" href="/login">Login</a>
               <a class="nav-item nav-link" href="/register">Register</a>
@@ -82,7 +151,7 @@
 
 <main role="main" class=" container main">
   <div class="row">
-    <div class="col-md-6 temp">
+    <div class="col-md-12 temp">
 
        {% with messages = get_flashed_messages(with_categories = true) %}
             {% if messages %}
@@ -94,14 +163,14 @@
         {% endif %}
         {% endwith %}
 
-      {% block content %}
+         {% block content %}
 
         {% endblock %}
     </div>
-      <div class="col-md-6 ">
-          <object class="mom-and-me" data="{{ url_for('static', filename='pics/mom-baby.svg') }}" width="600" height="600"> </object>
-<!--        <img src = "{{ url_for('static', filename='pics/mom-baby.svg') }}"/>-->
-      </div>
+<!--      <div class="col-md-6 ">-->
+<!--&lt;!&ndash;          <object class="mom-and-me" data="{{ url_for('static', filename='pics/mom-baby.svg') }}" width="600" height="600"> </object>&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src = "{{ url_for('static', filename='pics/mom-baby.svg') }}"/>&ndash;&gt;-->
+<!--      </div>-->
 
   </div>
 </main>

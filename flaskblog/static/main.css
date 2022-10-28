@@ -1,7 +1,7 @@
 
 
 .bg-steel {
-  background-color: #2c0070;
+  background-color: white;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -20,12 +20,15 @@
 
   padding: 10px 20px;
   border: 1px solid #dddddd;
-  border-radius: 3px;
+  border-radius: 11px;
   margin-bottom: 20px;
+  background:white
 }
 
 .article-title {
   color: #444444;
+  font-size: 1.5rem;
+  margin-top:1rem
 }
 
 a.article-title:hover {
@@ -41,6 +44,7 @@ a.article-title:hover {
   height: 65px;
   width: 65px;
   margin-right: 16px;
+
 }
 
 .article-metadata {
@@ -64,8 +68,8 @@ a.article-title:hover {
   height: 125px;
   width: 125px;
   margin-right: 20px;
-  margin-bottom: 16px;
-}
+
+ }
 
 .account-heading {
   font-size: 2.5rem;
@@ -81,10 +85,7 @@ position: relative
 z-index: 10
 }
 
-.mr-2{
-color: white
 
-}
 
 .list-group-item-light{
  background-color:  #36047f
@@ -101,18 +102,119 @@ color: white
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: #0E31E2;
+    background-color: #74D8CE;
     background-clip: padding-box;
-    border: 1px solid white;
+    border: 1px solid #018174;
     border-radius: .7rem;
     outline: 0;
-    box-shadow: 10px 10px 5px blue;
+    box-shadow: 0px 3px 3px 3px #D9D9D9;
+
 }
 
 .modal-header, .modal-body{
-    border-color: white
-    background:#0E31E2
+
     border-radius: .7rem;
 
 }
 
+.custom-btn{
+ border-radius: 9px/8px
+
+}
+
+.btn-light{
+    background:#dfeaf5
+}
+
+.navbar{
+padding: .16rem 1rem
+}
+
+.fa-info-circle{
+ margin-right: .5rem
+ margin-left: .5rem
+}
+.round-navbar{
+    border-radius:0 0 18px 18px
+}
+
+.line-1 {
+  height: 1px;
+  background: black;
+  z-index:1000
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: .5;
+}
+
+.cardd-title{
+    position : center;
+    width : 150px;
+    height : 30px;
+    font-family : Inter;
+    font-style : normal;
+    font-weight: 700;
+    font-size : 15px;
+    line-height : 18px;
+
+    color :     #40CDBB;
+    border :    2px solid white;
+}
+
+.boxed {
+  border: 0px solid green ;
+  background-color : white;
+  border-radius: 5px
+}
+
+.button-cus{
+    width: 220px;
+    background: #74D8CE;
+    border: 1px solid #74D8CE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.button-bg{
+    background-color: #008CBA
+
+}
+
+.row{
+ margin: auto 20rem 5rem 20rem
+}
+
+.custt{
+  margin-bottom: 0px;
+  margin-top : 15px;
+  margin-left : 20px;
+  background-color : #74D8CE;
+}
+
+.custome-prop{
+    margin-left : 200px;
+    margin-right : 40px;
+}
+
+
+
+.btn-secondary{
+    background-color: #dfeaf5
+     padding-top: .9rem
+}
+
+.nikithacss{
+    margin-top: .6rem
+
+
+}
+.purenikitha{
+    background:  #dfeaf5
+}
+
+.nav-item{
+    margin-right: 1rem
+}
