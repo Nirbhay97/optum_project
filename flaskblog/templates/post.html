@@ -11,12 +11,17 @@
             </div>
             <h2 class="article-title">{{ post.title }}</h2>
             <p class="article-content">{{ post.content }}</p>
+
                {%  if post.author == current_user %}
                     <div>
                         <a class="btn-primary btn-sm mt-1 mb-1" href="{{ url_for('update_post',post_id=post.id) }}">Update</a>
                         <a class="btn-sm btn-delete btn-danger mt-1 mb-0" data-toggle="modal" data-target="#deleteModal">Delete</a>
                     </div>
                 {% endif %}
+
+
+
+
           </div>
 
         </article>

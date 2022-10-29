@@ -91,7 +91,7 @@
 
           <a class="nav-item nav-link" href="/about">
               <button type="button" class="btn btn-light custom-btn" >
-                  <i class="fa fa-info-circle fa-6x" aria-hidden="true"></i>
+                  <i class="fa fa-info-circle fa-8x" aria-hidden="true"></i>
 <!--                     <img src="static\pics\navbar-two.svg" />-->
 <!--                  <object type="image/svg+xml" data="static\pics\navbar-two.svg"></object>-->
 
@@ -109,6 +109,14 @@
 
                            <button type="button" class="btn btn-light custom-btn">
                                 PREDICTION
+                            </button>
+
+                        </a>
+
+                    <a class="nav-item nav-link" href="{{ url_for('dashboard') }}">
+
+                           <button type="button" class="btn btn-light custom-btn">
+                                ANALYSIS
                             </button>
 
                         </a>
@@ -148,8 +156,18 @@
 <!--                     </li>-->
 <!--                </div>-->
             {% else %}
-              <a class="nav-item nav-link" href="/login">Login</a>
-              <a class="nav-item nav-link" href="/register">Register</a>
+             <a class="nav-item nav-link" href="/login">
+                            <button type="button" class="btn btn-light custom-btn">
+                                LOGIN
+                            </button>
+             </a>
+             <a id="preloaderfornikitha" class="nav-item nav-link" href="/register">
+                            <button type="button" class="btn btn-light custom-btn">
+                                SIGNUP
+                            </button>
+             </a>
+<!--              <a class="nav-item nav-link" href="/login">Login</a>-->
+<!--              <a class="nav-item nav-link" href="/register">Register</a>-->
             {% endif %}
         </div>
       </div>
@@ -159,7 +177,7 @@
 
 <main role="main" class=" container main">
   <div class="row">
-    <div class="col-md-12 temp">
+    <div class="col-md-6 temp">
 
        {% with messages = get_flashed_messages(with_categories = true) %}
             {% if messages %}
@@ -175,10 +193,12 @@
 
         {% endblock %}
     </div>
-<!--      <div class="col-md-6 ">-->
-<!--&lt;!&ndash;          <object class="mom-and-me" data="{{ url_for('static', filename='pics/mom-baby.svg') }}" width="600" height="600"> </object>&ndash;&gt;-->
-<!--&lt;!&ndash;        <img src = "{{ url_for('static', filename='pics/mom-baby.svg') }}"/>&ndash;&gt;-->
-<!--      </div>-->
+      <div class="col-md-6 justforher">
+
+<!--          <object class="mom-and-me" data="{{ url_for('static', filename='pics/mom-baby.svg') }}" width="600" height="600"> </object>-->
+        <img class="fixing_matt" src = "{{ url_for('static', filename='pics/mom-baby-img.png') }}"/>
+          <h1 class="fixing_matt shifting-down color-coding-heading" ><em>Med </em> & Care.....</h1>
+      </div>
 
   </div>
 </main>

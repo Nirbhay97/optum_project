@@ -1,5 +1,6 @@
 
-//window.onload = function() {
-//    $('#exampleModalCenter').modal('show');
-//};
+  window.onload = function(){
+  document.getElementById('preloaderfornikitha').click();
+}
+
 

@@ -65,7 +65,7 @@ specialists = {
 @app.route("/home")
 def home():
     posts = Post.query.all()
-    return render_template('home.html', posts=posts)
+    return render_template('home.html', posts=posts, title='nikitha')
 
 
 @app.route("/about")
