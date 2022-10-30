@@ -71,4 +71,37 @@ $ python run.py
 ```
 This establishes a server at port http://127.0.0.1:5000 . U can access it on any browser.
 
+## Links
+* <a href = "https://www.figma.com/file/He1wHftxD42Kaj3Yz96Yx5/OPTUM?node-id=0%3A1"> Figma link </a>
+* <a href = "https://youtu.be/0KL71iQ-4TU"> Youtube video </a>
+
+## Contributors:
+
+* <a href = "https://github.com/Nirbhay97"> Nirbhay Kumar </a>
+* <a href = "https://github.com/Nikitha-mattupalli"> Nikitha Mattupalli </a>
+* <a href = "https://github.com/d3nominator"> Rishabh Kumar Pandey </a>
+
+## Images of application
+![image1](https://user-images.githubusercontent.com/83468600/198866158-de9f9614-8bd8-47bd-bef8-64df6a98214a.png)
+
+
+![image2](https://user-images.githubusercontent.com/83468600/198866177-5def4612-1c64-44c5-ae15-6a6c248e73e8.png)
+
+
+![image3](https://user-images.githubusercontent.com/83468600/198866178-4744d317-67b5-4bfe-a42a-6897a62c07d8.png)
+
+
+![image4](https://user-images.githubusercontent.com/83468600/198866180-00f14f48-525d-45a9-8cfd-d58ecf56ac35.png)
+
+![image5](https://user-images.githubusercontent.com/83468600/198866184-3a33c203-64e4-45ce-84aa-1f62b1c34545.png)
+
+![image6](https://user-images.githubusercontent.com/83468600/198866190-219bc11e-5c8f-4853-be4e-c148935e46ea.png)
+
+
+![image7](https://user-images.githubusercontent.com/83468600/198866192-a8b9a891-e95a-494b-8294-ccc21fa1e3dd.png)
+
+
+
+
+
 
