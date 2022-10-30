@@ -1,2 +1,2 @@
-# optum_project
+# Optum Project
 Following visible successes on a wide range of predictive tasks, machine learning techniques are attracting substantial interest from medical researchers and clinicians.With the use of machine learning algorithms our application uses parent’s medical history and records, to predict the probability of various diseases in their children, providing the parents with early information for appropriate medical support required.
