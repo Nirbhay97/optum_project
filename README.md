@@ -44,6 +44,9 @@ Project is created with:
 * Flask-SQLAlchemy version: 3.0.2
 * SQLAlchemy version: 1.4.42
 * Sqlite3
+* Javascript Bootstrap CSS HTML
+* Machine Learning: sckit-learn pandas numpy pickle
+
  These are the main dependecies, rest are available in requirements.txt file.
  
 ## Setup
