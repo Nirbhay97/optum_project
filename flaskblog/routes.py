@@ -10,7 +10,7 @@ import pickle
 import numpy as np
 import warnings
 import pandas as pd
-from pandas_profiling import ProfileReport
+# from pandas_profiling import ProfileReport
 
 warnings.filterwarnings("ignore")
 
@@ -244,7 +244,7 @@ def prediction():
     return render_template('prediction.html', title='input_predic', form=form, legend='Predict')
 
 
-@app.route("/dashboard", methods=['GET', 'POST'])
-@login_required
-def dashboard():
-    return render_template('analysis.html')
+# @app.route("/dashboard", methods=['GET', 'POST'])
+# @login_required
+# def dashboard():
+#     return render_template('analysis.html')
